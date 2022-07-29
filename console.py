@@ -23,12 +23,6 @@ product2 = Product("Air Jordan 3", "University Red/White", 4, 90, 135, manufactu
 product_repository.save(product2)
 
 
-product1.name = "Nike 1 Trainer"
-product_repository.update(product1)
-
-product1db = product_repository.select(product1.id)
-
-print(product1db.__dict__)
 
 
 
