@@ -13,6 +13,7 @@ CREATE TABLE products (
     id SERIAL PRIMARY KEY,
     name VARCHAR(255),
     description VARCHAR(255),
+    size INT,
     stock_quantity INT,
     buying_cost INT,
     selling_price INT,

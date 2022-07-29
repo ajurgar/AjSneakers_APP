@@ -4,13 +4,16 @@ from models.product import Product
 class TestProduct(unittest.TestCase):
 
     def setUp(self):
-        self.product = Product("Nike Cortez", "Navy/White", 4, 90, 135, "Nike")
+        self.product = Product("Nike Cortez", "Navy/White", 7, 4, 90, 135, "Nike")
     
     def test_product_has_name(self):
         self.assertEqual("Nike Cortez", self.product.name)
 
     def test_product_has_description(self):
         self.assertEqual("Navy/White", self.product.description)
+
+    def test_product_size(self):
+        self.assertEqual(7, self.product.size)
 
     def test_product_stock_quantity(self):
         self.assertEqual(4, self.product.stock_quantity)

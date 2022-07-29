@@ -16,13 +16,26 @@ manufacturer2 = Manufacturer("New Balance", "Standard")
 manufacturer_repository.save(manufacturer2)
 
 
-product1 = Product("Nike Cortez", "Navy/White", 4, 90, 135, manufacturer1)
+product1 = Product("Nike Cortez", "Navy/White", 7, 4, 90, 135, manufacturer1)
 product_repository.save(product1)
 
-product2 = Product("Air Jordan 3", "University Red/White", 4, 90, 135, manufacturer1)
+product2 = Product("Air Jordan 3", "University Red/White", 8, 4, 90, 135, manufacturer1)
 product_repository.save(product2)
 
 
+
+
+
+
+
+
+# product2.name = "Trainer"
+
+# product_repository.update(product2)
+
+# show1= product_repository.select(product2.id)
+
+# print(show1.__dict__)
 
 
 
