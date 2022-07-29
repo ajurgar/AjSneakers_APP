@@ -46,3 +46,4 @@ def update(manufacturer):
     values = [manufacturer.name, manufacturer.shipping_speed, manufacturer.status, manufacturer.id]
     run_sql(sql,values)
 
+

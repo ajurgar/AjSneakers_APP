@@ -26,3 +26,30 @@ def select_all():
         product = Product(row['name'], row['description'], row['stock_quantity'], row['buying_cost'], row['selling_price'], manufacturer)
         products.append(product)
     return products
+
+def select(id):
+    product = None
+    sql = "SELECT * FROM products WHERE id = %s"
+    values = [id]
+    results = run_sql(sql, values)
+    
+    if results:
+        result = results[0]
+        manufacturer = manufacturer_repository.select(result['manufacturer_id'])
+        product = Product(result['name'], result['description'], result['stock_quantity'], result['buying_cost'], result['selling_price'], manufacturer)
+    return product
+
+def delete_all():
+    sql = "DELETE FROM products"
+    run_sql(sql)
+
+def delete(id):
+    sql = "DELETE FROM products WHERE id = %s"
+    values = [id]
+    run_sql(sql, values)
+
+
+def update(product):
+    sql = "UPDATE products SET(name, description, stock_quantity, buying_cost, selling_price, manufacturer_id) = (%s, %s, %s, %s, %s, %s) WHERE id = %s"
+    values = [product.name, product.description, product.stock_quantity, product.buying_cost, product.selling_price, product.manufacturer.id]
+    run_sql(sql, values)
