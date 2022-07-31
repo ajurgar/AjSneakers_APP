@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block content %}
+
+<form action="/manufacturers" method="post">
+
+    <div>
+        <label for="name"> Name: </label>
+        <input type="text" id="name" name="name" placeholder="Name" required autofocus>
+    </div>
+
+    <div>
+
+        <label for="shipping_speed"> Shipping Speed: </label>
+        <select name="shipping_speed" id="shipping_speed">
+
+            <option value="Fast Shipping"> Fast Shipping </option>
+            <option value="Standard"> Standard </option>
+        </select>
+    </div>
+
+    <div>
+        <label for="status">Status: </label>
+        <select name="status" id="status" class="new-edit-form-element">
+
+
+            <option value=True> Active </option>
+            <option value=False> Inactive </option>
+
+        </select>
+    </div>
+
+
+    <button type="submit"> Add</button>
+
+
+</form>
+
+{% endblock %}

@@ -1,3 +1,4 @@
+from unittest import result
 from db.run_sql import run_sql
 
 from models.manufacturer import Manufacturer
@@ -40,6 +41,11 @@ def select(id):
 def delete_all():
     sql = "DELETE FROM manufacturers"
     run_sql(sql)
+
+def delete(id):
+    sql = "DELETE FROM manufacturers WHERE id = %s"
+    values = [id]
+    run_sql(sql, values)
 
 def update(manufacturer):
     sql = "UPDATE manufacturers SET (name, shipping_speed, status) = (%s, %s, %s) WHERE id= %s"
