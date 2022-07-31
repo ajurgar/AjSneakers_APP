@@ -17,8 +17,33 @@
 
     {{product.manufacturer.name}}
 
+    {{product.manufacturer.shipping_speed}}
+
     <a href="/products/{{product.id}}/edit"> Edit </a>
+
+
+  
+    <b>Status: </b> 
+    {% if product.stock_quantity > 5%}
+    In Stock &#9989; 
+    {% elif product.stock_quantity > 0 and product.stock_quantity < 5 %}
+    Low Stock
+    {% else %}
+    Out of Stock &#10060; 
+    {% endif %}
+
+ <div class="buttons">
+
+ <form class ="delete-form" action="/products/{{product.id}}/delete" method="POST">
+
+    <button style="font-size: 15;" class="trash-button"> Delete
+         <i class="fa fa-trash-o fa-3x" style="font-size:30px ;color:red"></i> 
     
+    </button>
+
+
+    </form>
+
     
 </div>
 

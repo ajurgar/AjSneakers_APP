@@ -28,7 +28,7 @@ product_repository.save(product1)
 product2 = Product("Air Jordan 3", "University Red/White", 8, 4, 90, 135, manufacturer1)
 product_repository.save(product2)
 
-product3 = Product("Air Jordan 1", "Rotal Blue", 4, 10, 149, 210, manufacturer1)
+product3 = Product("Air Jordan 1", "Royal Blue", 4, 0, 149, 210, manufacturer1)
 product_repository.save(product3)
 
 product4 = Product("Air Force 1 Low", "Triple White", 7, 15, 90, 140, manufacturer1)
@@ -43,7 +43,7 @@ product_repository.save(product6)
 product7 = Product("New Balance 2002R", "Protection Pack/Green", 7, 12, 130, 180, manufacturer2)
 product_repository.save(product7)
 
-product8 = Product("New Balance 900V3", "Marvel Head/ Grey", 10, 4, 200, 260, manufacturer2)
+product8 = Product("New Balance 900V3", "Marvel Head/ Grey", 10, 0, 200, 260, manufacturer2)
 product_repository.save(product8)
 
 
