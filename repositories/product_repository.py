@@ -23,7 +23,7 @@ def select_all():
 
     for row in results:
         manufacturer = manufacturer_repository.select(row['manufacturer_id'])
-        product = Product(row['name'], row['description'],row['size'], row['stock_quantity'], row['buying_cost'], row['selling_price'], manufacturer)
+        product = Product(row['name'], row['description'],row['size'], row['stock_quantity'], row['buying_cost'], row['selling_price'], manufacturer, row['id'])
         products.append(product)
     return products
 

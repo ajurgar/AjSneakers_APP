@@ -1,9 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
-{% for product in all_products %}
-
-<div class ='content'>
+<div class ='view'>
 
     {{product.name}}
 
@@ -18,15 +16,8 @@
     {{product.selling_price}}
 
     {{product.manufacturer.name}}
-
- <a href="/products/{{ product.id }}"> View </a>
-
     
-
 </div>
-
-{% endfor %}
-
 
 
 
