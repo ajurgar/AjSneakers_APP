@@ -36,7 +36,7 @@ def select(id):
     if results:
         result = results[0]
         manufacturer = manufacturer_repository.select(result['manufacturer_id'])
-        product = Product(result['name'], result['description'], result['size'], result['stock_quantity'], result['buying_cost'], result['selling_price'], manufacturer)
+        product = Product(result['name'], result['description'], result['size'], result['stock_quantity'], result['buying_cost'], result['selling_price'], manufacturer, result['id'])
     return product
 
 def delete_all():
