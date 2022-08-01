@@ -5,5 +5,5 @@ class Manufacturer:
         self.status = status
         self.id = id
     
-    def mark_deactivated(self):
+    def deactivated(self):
         self.status = False

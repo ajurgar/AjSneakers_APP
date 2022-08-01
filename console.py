@@ -18,7 +18,7 @@ manufacturer_repository.save(manufacturer2)
 manufacturer3 = Manufacturer("Adidas", "Standard")
 manufacturer_repository.save(manufacturer3)
 
-manufacturer4 = Manufacturer("Asics", "Fast Shipping")
+manufacturer4 = Manufacturer("Asics", "Fast Shipping", False)
 manufacturer_repository.save(manufacturer4)
 
 

@@ -19,6 +19,8 @@
 
     {{product.manufacturer.shipping_speed}}
 
+    <b>Markup:</b> {{product.markup()}}%
+
     <a href="/products/{{product.id}}/edit"> Edit </a>
 
 
@@ -37,7 +39,7 @@
  <form class ="delete-form" action="/products/{{product.id}}/delete" method="POST">
 
     <button style="font-size: 15;" class="trash-button"> Delete
-         <i class="fa fa-trash-o fa-3x" style="font-size:30px ;color:red"></i> 
+         <i class="fa fa-trash-o fa-3x" style="color:red"></i> 
     
     </button>
 

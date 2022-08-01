@@ -3,7 +3,7 @@
 
 
 <header>
-    <h1> Store Inventory</h1>
+    <h2> Store Inventory</h2>
 </header>
 {% for product in all_products %}
 
@@ -24,6 +24,8 @@
     {{product.manufacturer.name}}
 
     {{product.manufacturer.shipping_speed}}
+
+    <b>Markup:</b> {{product.markup()}}%
 
     <b>Status: </b> 
     {% if product.stock_quantity > 0%}
