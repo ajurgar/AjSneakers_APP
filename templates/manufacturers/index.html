@@ -2,7 +2,7 @@
 
 {% block content%}
 
-{% for manufacturer in all_manufacturers %}
+
 
 <table class="styled-table">
 
@@ -13,6 +13,7 @@
 <th>  <b>Details: </b> </th>
 <th></th>
     </tr>
+    {% for manufacturer in all_manufacturers %}
 <tr>
 <td>{{ manufacturer.name}}</td>
 <td>{{ manufacturer.shipping_speed}}</td>
@@ -35,9 +36,9 @@
     </form></td>
     
 </tr>
-
+{% endfor %}
 </table>  
 
-{% endfor %}
+
 
 {% endblock %}

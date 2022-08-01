@@ -24,18 +24,22 @@ header{
 }
 
 .title{
-    color:#B22222;
-    font-size: 80px;
+    color:#dddddd;
+    font-size: 60px;
+    text-align: -webkit-center;
+    padding-top: 40px;
+
 }
 
 #img{
-margin-top: 0px;
+margin-top: 50px;
 }
 
 
 .menu {
     display: flex;
     justify-content: space-between;
+    padding-top: 20px;
 }
 
 .menu a {
@@ -45,7 +49,7 @@ margin-top: 0px;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    font-size: 22px;
+    font-size: 23px;
 }
 
 .menu a i{
@@ -53,17 +57,11 @@ margin-top: 0px;
     
 }
 
-footer{
-
-    color:white
-}
-
-
 
 body > header > h1{
     color: black;
     font-family: 'Roboto', sans-serif;
-    size: ;
+    size: 150px;
 }
 h2{
     color:white;
@@ -75,7 +73,7 @@ h2{
     margin: 25px 0;
     font-size: 0.9em;
     font-family: sans-serif;
-    min-width: 400px;
+    min-width: -webkit-fill-available;
     box-shadow:  0px 20px 20px 0px #aa001938;
     
 }
@@ -110,5 +108,57 @@ h2{
     border-radius:  0  15px 0 0;
 }
 
+input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+  }
+  label{
+    color:#B22222
+  }
+  #manufacturer{
+    width: 100%;
+    padding: 12px 20px;
+  }
+
+  .new-product{  
+    text-align: center;   
+    padding: 12px 20px;
+
+    }  
+
+   .center{  
+        font-size: 25px;  
+        color: #B22222;
+   }
+
+   #shipping_speed{
+    width: 100%;
+   }
+
+   #status{
+    width: 100%;
+   }
+
+   .btn{
+    text-align: center;   
+    padding: 12px 20px;
+
+   }
+
+   .icons{
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 30px;
+   }
+
+   footer{
+
+    color:white
+}
 
 
+        
