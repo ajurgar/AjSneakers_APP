@@ -4,6 +4,7 @@ body{
     padding: 0;
     margin: 8%;
     background-color: black;
+    font-family: "neon-tubes-2-regular", sans-serif;
 }
 
 header{
@@ -77,10 +78,16 @@ h2{
     box-shadow:  0px 20px 20px 0px #aa001938;
     
 }
-
+.thead{
+    font-family:'neon-tubes-2-regular';
+    color: #dddddd;
+}
+.table2{
+    font-family: 'neon-tubes-2-regular';
+    color: #dddddd;
+}
 .styled-table tr {
     background-color: #dddddd;
-    color: black;
     text-align: left;
     border-bottom: 1px solid #dddddd;
   
@@ -156,9 +163,44 @@ input {
    }
 
    footer{
-
-    color:white
+    color:white;
+    font-family: 'Times New Roman', Times, serif;
 }
+
+@font-face {
+    font-family: "neon-tubes-2-regular";
+    src:
+      url("https://assets.codepen.io/2585/NeonTubes2.otf") format("woff"),
+      url("https://assets.codepen.io/2585/NeonTubes2.otf") format("opentype"),
+      url("https://assets.codepen.io/2585/NeonTubes2.otf") format("truetype")
+    ;
+  }
+  
+  .neon-red {
+    --neon: hsl(355 100% 95%);
+    --neon-glow: hsl(355 98% 40%);
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+  }
+  
+ 
+  h1 > i {
+    color: var(--neon);
+    text-shadow: 
+      0 0 20px var(--neon-glow),
+      0 0 2.5vmin var(--neon-glow),
+      0 0 5vmin var(--neon-glow),
+      0 0 10vmin var(--neon-glow),
+      0 0 15vmin var(--neon-glow);
+  }
+  
+  
+    
+ 
+
+  
+
 
 
         
