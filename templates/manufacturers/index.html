@@ -1,26 +1,29 @@
 {% extends "base.html" %}
 
 {% block content%}
+
 {% for manufacturer in all_manufacturers %}
-<div>
-{{ manufacturer.name}}
 
-{{ manufacturer.shipping_speed}}
+<table>
 
-
-{% if manufacturer.status %}
- <b> Status: </b> Active &#9989; 
-
-{% else%}
-
-<b> Status: </b> Deactivated &#10060;
-</div>
-
-{% endif%}
-<a href="/manufacturers/{{manufacturer.id}}"> View   </a>
-
-
-<form class ="delete-form" action="/manufacturers/{{ manufacturer.id }}/delete" method="POST">
+    <tr>
+<th> <b>Name: </b>  </th>
+<th>  <b>Shipping Speed: </b> </th>
+<th>  <b>Status: </b>  </th>
+<th>  <b>Details: </b> </th>
+    </tr>
+<tr>
+<td>{{ manufacturer.name}}</td>
+<td>{{ manufacturer.shipping_speed}}</td>
+<td>{% if manufacturer.status %}
+     Active &#9989; 
+   
+   {% else%}
+   
+  Deactivated &#10060;</td>
+  {% endif%}
+<td><a href="/manufacturers/{{manufacturer.id}}"> View   </a></td>
+<td><form class ="delete-form" action="/manufacturers/{{ manufacturer.id }}/delete" method="POST">
        
     <button style="font-size: 15;" class="trash-button"> Delete
          <i class="fa fa-trash-o fa-3x" style="font-size:30px ;color:red"></i> 
@@ -28,9 +31,10 @@
     </button>
 
 
-    </form>
+    </form></td>
+</tr>
 
-    
+</table>  
 
 {% endfor %}
 

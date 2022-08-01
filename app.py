@@ -14,9 +14,9 @@ app.register_blueprint(manufacturers_blueprint)
 
 
 
-# @app.route('/')
-# def home():
-#     return render_template('index.html')
+@app.route('/')
+def home():
+    return render_template('home.html')
 
 
 if __name__ == '__main__':

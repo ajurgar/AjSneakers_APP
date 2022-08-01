@@ -12,7 +12,7 @@ products_blueprint = Blueprint("/products", __name__)
 @products_blueprint.route('/products')
 def products():
     products = product_repository.select_all()
-    return render_template('/index.html', all_products = products)
+    return render_template('products/index.html', all_products = products)
 
 @products_blueprint.route('/products/new')
 def new_product():
