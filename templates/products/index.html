@@ -2,12 +2,11 @@
 {% block content %}
 
 
-<header>
-    <h2> Store Inventory</h2>
-</header>
-{% for product in all_products %}
 
-<table>
+    <h2> Store Inventory</h2>
+
+
+<table class="styled-table">
 <tr>
     <th>
 <b>Name: </b>
@@ -48,9 +47,12 @@
     <th>
 <b> Details: </b>
     </th>
+    <th></th>
  
 
 </tr>
+
+{% for product in all_products %}
 <tr>
     <td> {{product.name}} </td>
     <td> {{product.description}} </td>
@@ -70,21 +72,23 @@
 
    
 <td>
+  
  <div class="buttons">
 
  <form class ="delete-form" action="/products/{{product.id}}/delete" method="POST">
 
-    <button style="font-size: 15;" class="trash-button"> Delete
-         <i class="fa fa-trash-o fa-3x" style="font-size:30px ;color:red"></i> 
-    
+    <button style="font-size: 15;" class="trash-button"> delete  
+        <i data-fa-symbol="delete" class="fas fa-trash fa-fw"></i>
+        
     </button>
 
 
     </form>
 </td>
-</table>
 </tr>
 {% endfor %}
+</table>
+
 
 
 

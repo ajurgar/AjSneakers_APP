@@ -1,0 +1,80 @@
+body{
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 8%;
+    background-color: black;
+}
+
+header{
+    background-image: url('/static/images/shoe.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 50px;
+    position: relative;
+    margin: 0;
+}
+.menu {
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu a {
+    color: #dddddd;
+
+
+}
+.menu a i{
+    margin-right: 5px;
+}
+
+footer{
+
+    color:white
+}
+
+
+
+body > header > h1{
+    color: #dddddd;
+    font-family: 'Roboto', sans-serif;
+    
+}
+h2{
+    color:white;
+    font-family: 'Roboto', sans-serif;
+}
+
+.styled-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+}
+
+.styled-table tr {
+    background-color: #dddddd;
+    color: black;
+    text-align: left;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+}
+
+.styled-table tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+
+.styled-table tr:first-of-type {
+    background-color: #009879;
+}
