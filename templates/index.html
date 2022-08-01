@@ -7,34 +7,68 @@
 </header>
 {% for product in all_products %}
 
-<div class ='content'>
+<table>
+<tr>
+    <th>
+<b>Name: </b>
+    </th>
+    <th>
+<b>Description: </b>
+    </th>
+    <th>
+<b>Size: </b>
+    </th>
 
-    {{product.name}}
+    <th>
+<b> Stock Quantity: </b>
+    </th>
+    <th>
+<b> Buying Cost: </b>
+    </th>
 
-    {{product.description}}
+    <th>
+<b> Selling Price: </b>
+    </th>
+    <th>
+<b> Manufacturer: </b>
+    </th>
 
-    {{product.size}}
+    <th>
+<b> Shipping Speed: </b>
+    </th>
 
-    {{product.stock_quantity}}
+    <th>
+<b> Mark Up: </b>
+    </th>
 
-    {{product.buying_cost}}
+    <th>
+<b> Status: </b>
+    </th>
 
-    {{product.selling_price}}
+    <th>
+<b> Details: </b>
+    </th>
 
-    {{product.manufacturer.name}}
-
-    {{product.manufacturer.shipping_speed}}
-
-    <b>Markup:</b> {{product.markup()}}%
-
-    <b>Status: </b> 
-    {% if product.stock_quantity > 0%}
+</tr>
+<tr>
+    <td> {{product.name}} </td>
+    <td> {{product.description}} </td>
+    <td> {{product.size}} </td>
+    <td> {{product.stock_quantity}} </td>
+    <td> {{product.buying_cost}}</td>
+    <td>{{product.selling_price}}</td>
+    <td> {{product.manufacturer.name}}</td>
+    <td>{{product.manufacturer.shipping_speed}}</td>
+    <td>{{product.markup()}}% </td>
+    <td>    {% if product.stock_quantity > 0%}
     In Stock &#9989; 
     {% else %}
     Out of Stock &#10060; 
-{% endif %}
- <a href="/products/{{ product.id }}"> View </a>
+{% endif %}</td>
+<td> <a href="/products/{{ product.id }}"> View </a></td>
 
+   
+<td>
  <div class="buttons">
 
  <form class ="delete-form" action="/products/{{product.id}}/delete" method="POST">
@@ -46,14 +80,9 @@
 
 
     </form>
-
-
- </div>
-
-    
-
-</div>
-
+</td>
+</table>
+</tr>
 {% endfor %}
 
 
