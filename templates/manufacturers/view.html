@@ -1,35 +1,138 @@
 {% extends "base.html" %}
 {% block content %}
-<div>
-    {{ manufacturer.name}}
-    
-    {{ manufacturer.shipping_speed}}
-    
-    
-    {% if manufacturer.status %}
-     <b> Status: </b> Active &#9989; 
-    
-    {% else%}
-    
-    <b> Status: </b> Inactive &#10060;
-    </div>
-    
-    {% endif%}
 
-    <a href="/manufacturers/{{ manufacturer.id }}/edit"> Edit </a>
+<table class="styled-table">
+    <tr class="font2">
+        <th>
+            <b>Manufacturer: </b>
+        </th>
+        <th>
+            <b>Shipping Speed: </b>
+        </th>
+        <th>
+            <b>Status: </b>
+        </th>
+        <th></th>
+        <th></th>
 
-    <div class="buttons">
+    <tr>
+        <td>{{ manufacturer.name}}</td>
+        <td>{{ manufacturer.shipping_speed}}</td>
+        <td> {% if manufacturer.status %}
+            Active &#9989;
 
-        <form class ="delete-form" action="/manufacturers/{{ manufacturer.id }}/delete" method="POST">
-       
-           <button style="font-size: 15;" class="trash-button"> Delete
-                <i class="fa fa-trash-o fa-3x" style="font-size:30px ;color:red"></i> 
-           
-           </button>
-       
-       
-           </form>
-       
-           
-       </div>
-{% endblock %}
+            {% else%}
+            Inactive &#10060;
+            {% endif%}
+        </td>
+        <td><a href="/manufacturers/{{ manufacturer.id }}/edit"> Edit </a></td>
+        <td>
+            <form class="delete-form" action="/manufacturers/{{ manufacturer.id }}/delete" method="POST">
+
+                <button style="font-size: 15;" class="trash-button"> Delete
+                    <i class="fa fa-trash-o fa-3x" style="font-size:30px ;color:red"></i>
+
+                </button>
+
+
+            </form>
+        </td>
+
+    </tr>
+</table>
+
+
+<h1 class="products-manufacturer"> Products:</h1>
+
+
+
+<table class="styled-table">
+    <tr class="font1">
+        <th>
+    <b>Name: </b>
+        </th>
+        <th>
+    <b>Description: </b>
+        </th>
+        <th>
+    <b>Size: </b>
+        </th>
+    
+        <th>
+    <b> Stock Quantity: </b>
+        </th>
+        <th>
+    <b> Buying Cost: </b>
+        </th>
+    
+        <th>
+    <b> Selling Price: </b>
+        </th>
+        <th>
+    <b> Manufacturer: </b>
+        </th>
+    
+        <th>
+    <b> Shipping Speed: </b>
+        </th>
+    
+        <th>
+    <b> Mark Up: </b>
+        </th>
+    
+        <th>
+    <b> Status: </b>
+        </th>
+
+        <th>
+    <b>  </b>
+        </th>
+        <th>
+    <b>  </b>
+        </th>
+    
+    
+    </tr>
+   
+{% for product in products %}
+<tr>
+    <td> {{product.name}} </td>
+    <td> {{product.description}} </td>
+    <td> {{product.size}} </td>
+    <td> {{product.stock_quantity}} </td>
+    <td> {{product.buying_cost}}</td>
+    <td>{{product.selling_price}}</td>
+    <td> <a href="/products/manufacturer/{{product.manufacturer.id}}">{{product.manufacturer.name}}</a></td>
+    <td>{{product.manufacturer.shipping_speed}}</td>
+    <td>{{product.markup()}}% </td>
+    <td>{% if product.stock_quantity > 5%}
+        In Stock &#9989; 
+        {% elif product.stock_quantity > 0 and product.stock_quantity < 5 %}
+        Low Stock 
+        {% else %}
+        Out of Stock &#10060; 
+        {% endif %}</td>
+<td> <a href="/products/{{ product.id }}"> View </a></td>
+
+   
+<td>
+  
+ <div class="buttons">
+
+ <form class ="delete-form" action="/products/{{product.id}}/delete" method="POST">
+
+    <button style="font-size: 15;" class="trash-button"> delete  
+        <i data-fa-symbol="delete" class="fas fa-trash fa-fw"></i>
+        
+    </button>
+
+
+    </form>
+</td>
+</tr>
+{% endfor %}
+   </table>
+
+
+
+        {% endblock %}

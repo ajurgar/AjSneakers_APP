@@ -8,13 +8,19 @@ body{
 }
 
 header{
-    background-image: url('/static/images/shoe.jpg');
     background-position: center;
-    background-repeat: no-repeat;
+    background: no-repeat top center fixed;
     background-size: contain;
-    padding: 50px;
     position: relative;
-    margin: 0;
+}
+
+body > header > div{
+    display: flex;
+    justify-content: center;
+}
+
+.sneaker{
+    width: 300px;
 }
 
 #home{
@@ -86,6 +92,16 @@ h2{
     font-family: 'neon-tubes-2-regular';
     color: #dddddd;
 }
+
+.font1{
+    font-family: 'neon-tubes-2-regular';
+    color: #dddddd;
+      }
+.font2{
+    font-family: 'neon-tubes-2-regular';
+    color: #dddddd;
+      }
+      
 .styled-table tr {
     background-color: #dddddd;
     text-align: left;
@@ -144,10 +160,12 @@ input {
 
    #shipping_speed{
     width: 100%;
+    padding: 12px 20px;
    }
 
    #status{
     width: 100%;
+    padding: 12px 20px;
    }
 
    .btn{
@@ -162,7 +180,7 @@ input {
     gap: 30px;
    }
 
-   footer{
+   footer {
     color:white;
     font-family: 'Times New Roman', Times, serif;
 }
@@ -194,7 +212,13 @@ input {
       0 0 10vmin var(--neon-glow),
       0 0 15vmin var(--neon-glow);
   }
-  
+
+  .products-manufacturer{
+    color: #dddddd;
+    text-align: center; 
+    font-family: 'Roboto', sans-serif;
+  }
+ 
   
     
  

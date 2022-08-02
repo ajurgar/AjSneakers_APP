@@ -3,7 +3,7 @@
 
 
 <table class="styled-table">
-    <tr>
+    <tr class="font1">
         <th>
     <b>Name: </b>
         </th>
@@ -41,7 +41,10 @@
         </th>
 
         <th>
-    <b> Actions: </b>
+    <b>  </b>
+        </th>
+        <th>
+    <b>  </b>
         </th>
     
     
@@ -53,7 +56,7 @@
         <td> {{product.stock_quantity}} </td>
         <td> {{product.buying_cost}}</td>
         <td>{{product.selling_price}}</td>
-        <td> {{product.manufacturer.name}}</td>
+        <td> <a href="/products/manufacturer/{{product.manufacturer.id}}">{{product.manufacturer.name}}</a></td>
         <td>{{product.manufacturer.shipping_speed}}</td>
         <td>{{product.markup()}}% </td>
         <td>     
@@ -64,8 +67,9 @@
             {% else %}
             Out of Stock &#10060; 
             {% endif %}</td>
-    <td> <a href="/products/{{product.id}}/edit"> Edit </a>
-        <form class ="delete-form" action="/products/{{product.id}}/delete" method="POST">
+    <td> <a href="/products/{{product.id}}/edit"> Edit </a></td>
+       <td>
+    <form class ="delete-form" action="/products/{{product.id}}/delete" method="POST">
 
             <button style="font-size: 15;" class="trash-button"> Delete
                  <i class="fa fa-trash-o fa-3x" style="color:red"></i> 
@@ -73,7 +77,8 @@
             </button>
         
         
-            </form></td>
+            </form>
+        </td>
     </tr>
    </table>
 

@@ -55,14 +55,16 @@
     <td> {{product.stock_quantity}} </td>
     <td> {{product.buying_cost}}</td>
     <td>{{product.selling_price}}</td>
-    <td> {{product.manufacturer.name}}</td>
+    <td> <a href="/products/manufacturer/{{product.manufacturer.id}}">{{product.manufacturer.name}}</a></td>
     <td>{{product.manufacturer.shipping_speed}}</td>
     <td>{{product.markup()}}% </td>
-    <td>    {% if product.stock_quantity > 0%}
-    In Stock &#9989; 
-    {% else %}
-    Out of Stock &#10060; 
-{% endif %}</td>
+    <td>{% if product.stock_quantity > 5%}
+        In Stock &#9989; 
+        {% elif product.stock_quantity > 0 and product.stock_quantity < 5 %}
+        Low Stock
+        {% else %}
+        Out of Stock &#10060; 
+        {% endif %}</td>
 <td> <a href="/products/{{ product.id }}"> View </a></td>
 
    
