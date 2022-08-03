@@ -37,6 +37,9 @@ body > header > div{
     padding-top: 40px;
 
 }
+.textfooter{
+    align-content: baseline;
+}
 
 #img{
 margin-top: 50px;
@@ -174,11 +177,9 @@ input {
 
    }
 
-   .icons{
-    display: flex;
-    flex-direction: row-reverse;
-    gap: 30px;
-   }
+.textfooter{
+ 
+}
 
    footer {
     color:white;
@@ -220,7 +221,16 @@ input {
   }
  
   
-    
+.textfooter{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 50px;
+}
+
+.icons{
+    width: 18%;
+    display: flex;
+    justify-content: space-between;}
  
 
   
