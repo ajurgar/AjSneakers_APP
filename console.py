@@ -45,31 +45,3 @@ product_repository.save(product7)
 
 product8 = Product("New Balance 900V3", "Marvel Head/ Grey", 10, 0, 200, 260, manufacturer2)
 product_repository.save(product8)
-
-
-
-
-
-
-
-
-# product2.name = "Trainer"
-
-# product_repository.update(product2)
-
-# show1= product_repository.select(product2.id)
-
-# print(show1.__dict__)
-
-
-
-# manufacturer_repository.select(3)
-
-# manufacturer1.name = "Adidas"
-# manufacturer1.shipping_speed = "Standard"
-
-# manufacturer_repository.update(manufacturer1)
-
-# manufacturer1_db = manufacturer_repository.select(manufacturer1.id)
-
-# print(manufacturer1_db.__dict__)
