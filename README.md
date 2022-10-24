@@ -1,4 +1,4 @@
-# Project_Shop_Inventory
+# AjSneakers_APP
 
 AJsneakers-Tracker
 
